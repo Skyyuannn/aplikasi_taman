@@ -1,0 +1,535 @@
+INFO - 2023-12-31 06:39:32 --> REDIRECTED ROUTE at http://localhost:8080/login
+INFO - 2023-12-31 06:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 06:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 06:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 06:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 06:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:38:23 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:38:23 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:42:30 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:42:30 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE `ft`.`type` = :ft.type:
+AND YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:48:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:02 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:02 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:06 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:06 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:07 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:07 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:21 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:21 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE `ft`.`type` = :ft.type:
+AND YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:21 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:21 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE `ft`.`type` = :ft.type:
+AND YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:21 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:21 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE `ft`.`type` = :ft.type:
+AND YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:48 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:48 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE `ft`.`type` = :ft.type:
+AND YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:49:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:49:48 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:49:48 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE `ft`.`type` = :ft.type:
+AND YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 07:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 07:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 07:53:26 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 07:53:26 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 08:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 08:03:55 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 08:03:55 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 08:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:04:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 08:04:25 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 08:04:25 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 08:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 08:15:21 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 08:15:21 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 08:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 08:17:06 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 08:17:06 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE `ft`.`type` = :ft.type:
+AND YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 08:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-12-31 08:17:43 --> mysqli_sql_exception: Column 'created_date' in where clause is ambiguous in C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\flower-asset\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `f`.`id`...', 0)
+#1 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `f`.`id`...')
+#2 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `f`.`id`...')
+#3 C:\flower-asset\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`...', Array, false)
+#4 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\flower-asset\app\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData(Array)
+#6 C:\flower-asset\app\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute(Array)
+#7 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+#8 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+#9 C:\flower-asset\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\flower-asset\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\flower-asset\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset...')
+#12 {main}
+CRITICAL - 2023-12-31 08:17:43 --> Column 'created_date' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `f`.`id`, `f`.`name`, `f`.`qty`, `f`.`image`, `f`.`created_date`, `ft`.`type`
+FROM `t_flowers` as `f`
+JOIN `t_flowers_type` as `ft` ON `ft`.`id` = `f`.`type`
+WHERE YEAR(created_date) = :YEAR(created_date):
+ LIMIT 10', [...], false)
+ 2 APPPATH\Action\Flowers\FetchIndexDataAction.php(55): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Action\Flowers\FetchIndexDataAction.php(11): App\Action\Flowers\FetchIndexDataAction->getDtData([...])
+ 4 APPPATH\Controllers\FlowerController.php(33): App\Action\Flowers\FetchIndexDataAction->execute([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\FlowerController->loadData()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\FlowerController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\flower-asset\\public\\index.php')
+INFO - 2023-12-31 08:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-31 08:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

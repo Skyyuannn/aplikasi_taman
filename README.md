@@ -1,67 +1,31 @@
-# CodeIgniter 4 Application Starter
+# TamanKu
 
-## What is CodeIgniter?
+TamanKu adalah aplikasi web yang dirancang untuk membantu pengguna menemukan, mengeksplorasi, dan memanfaatkan taman-taman di sekitar mereka. Dengan TamanKu, pengguna dapat mencari taman berdasarkan lokasi, melihat fasilitas yang tersedia, membaca ulasan dari pengunjung lain, dan bahkan memberikan kontribusi ulasan mereka sendiri.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Fitur Utama
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- **Detail Taman**: Lihat informasi lengkap tentang taman termasuk fasilitas, jam buka, dan foto.
+- **Ulasan Pengguna**: Baca ulasan dari pengguna lain dan tambahkan ulasan Anda sendiri.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Teknologi yang Digunakan
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+- **Frontend**: HTML5, CSS3
+- **Backend**: PHP
+- **Database**: MySql
+- **Framework**: CodeIgniter4
 
-## Installation & updates
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## Instalasi
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+1. Clone repositori ini:
+    ```bash
+    git clone https://github.com/username/tamanku.git
+    ```
 
-## Setup
+## Kontribusi
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+Kami sangat menghargai kontribusi Anda! Jika Anda ingin berkontribusi, silakan fork repositori ini dan buat pull request dengan perubahan Anda. Pastikan untuk mengikuti pedoman kontribusi kami.
 
-## Important Change with index.php
+## Lisensi
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> **Warning**
-> The end of life date for PHP 7.4 was November 28, 2022. If you are
-> still using PHP 7.4, you should upgrade immediately. The end of life date
-> for PHP 8.0 will be November 26, 2023.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Proyek ini dilisensikan di bawah lisensi MIT. Lihat file [LICENSE](LICENSE) untuk informasi lebih lanjut.
