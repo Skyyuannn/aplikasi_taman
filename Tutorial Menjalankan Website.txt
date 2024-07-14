@@ -1,0 +1,9 @@
+1. Download XAMPP versi 7.4
+2. Start xampp
+3. Buka folder project menggunakan VSCode, lalu ketik perintah dibawah ini di terminal :
+- cd flower-asset
+- composer install
+- php spark migrate
+- php spark db:seed FlowerTypeSeeder 
+- php spark serve
+Untuk menjalankan project klik link localhost yang tercantum
