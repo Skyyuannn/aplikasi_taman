@@ -1,5 +1,7 @@
 # TamanKu
 
+Update V1.0
+
 TamanKu adalah aplikasi web yang dirancang untuk membantu pengguna menemukan, mengeksplorasi, dan memanfaatkan taman-taman di sekitar mereka. Dengan TamanKu, pengguna dapat mencari taman berdasarkan lokasi, melihat fasilitas yang tersedia, membaca ulasan dari pengunjung lain, dan bahkan memberikan kontribusi ulasan mereka sendiri.
 
 ## Fitur Utama
