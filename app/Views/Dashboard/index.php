@@ -24,16 +24,19 @@ foreach ($flowers as $flower) {
     $flowersByYear[$year][] = $flower;
 }
 
-// Mengurutkan data berdasarkan tahun dari yang terlama ke terbaru
-ksort($flowersByYear);
+// Mengurutkan tahun dari terbaru ke terlama
+krsort($flowersByYear);
 
 // Menyiapkan data untuk Chart.js
-$years = array_keys($flowersByYear);
-$quantities = array_map(function($flowers) {
-    return array_reduce($flowers, function($carry, $flower) {
+$years = [];
+$quantities = [];
+
+foreach ($flowersByYear as $year => $flowers) {
+    $years[] = $year;
+    $quantities[] = array_reduce($flowers, function($carry, $flower) {
         return $carry + $flower['qty'];
     }, 0);
-}, $flowersByYear);
+}
 
 ?>
 
