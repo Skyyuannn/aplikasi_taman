@@ -15,7 +15,7 @@
                     <input type="text" class="form-control" id="type" name="type" placeholder="Masukan Jenis Tanaman" required>
                 </div>
                 <div class="form-group col-md-3">
-                    <button type="submit" class="btn btn-primary .btnSubmit">Insert</button>
+                    <button type="submit" class="btn btn-danger .btnSubmit">Insert</button>
                 </div>
             </div>
         </form>
