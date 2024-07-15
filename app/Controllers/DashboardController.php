@@ -17,4 +17,12 @@ class DashboardController extends BaseController
         $data['flowersType'] = (new FlowerTypeModel())->findAll();
         return view("dashboard/index", $data);
     }
+
+    public function index2()
+    {
+        $data['totalFlowers'] = (new FlowerModel())->sumFlowerQty();
+        $data['flowers'] = (new FlowerModel())->findAll();
+        $data['flowersType'] = (new FlowerTypeModel())->findAll();
+        return view("dashboarduser/index", $data);
+    }
 }
