@@ -8,9 +8,9 @@
 
 
 <!-- Content Row -->
-<div class="row text-center">
+<div class="row">
     <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-3 col-md-6 mb-4">
+    <div class="col-xl-12 col-md-12 mb-4">
         <a href="flowers\data-tanaman-filter" style="text-decoration: none; color: inherit;">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -28,9 +28,11 @@
             </div>
         </a>
     </div>
+</div>
 
+<div class="row">
     <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-3 col-md-6 mb-4">
+    <div class="col-xl-12 col-md-12 mb-4">
         <a href="master-data/flowers-type/tipe-tanaman" style="text-decoration: none; color: inherit;">
             <div class="card border-left-danger shadow h-100 py-2">
                 <div class="card-body">
