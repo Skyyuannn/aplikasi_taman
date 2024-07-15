@@ -10,7 +10,7 @@
     <div class="card-header d-flex justify-content-between">
         <h5 class="m-0 font-weight-bold text-danger">Data Tanaman</h5>
         <div class="section-header-button">
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm" onclick="create()" data-toggle="modal" data-target="#addFLower"><i class="fas fa-plus"></i> Tambah</a>
+            <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="create()" data-toggle="modal" data-target="#addFLower"><i class="fas fa-plus"></i> Tambah</a>
         </div>
     </div>
     <div class="card-body">
