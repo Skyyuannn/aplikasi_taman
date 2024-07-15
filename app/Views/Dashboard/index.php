@@ -6,8 +6,6 @@
     <h1 class="h3 mb-0 text-gray-800"><b> Dashboard </b> </h1>
 </div>
 
-<!-- Tombol Panduan -->
-
 
 <!-- Content Row -->
 <div class="row text-center">
