@@ -32,7 +32,7 @@
         </a>
         <div id="tanaman" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Komponen:</h6>
+                <h6 class="collapse-header">Pilihan:</h6>
                 <a class="collapse-item" href="<?= base_url('main/flowers/data-tanaman') ?>">Data Tanaman</a>
             </div>
         </div>
@@ -44,7 +44,7 @@
         </a>
         <div id="masterData" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Komponen:</h6>
+                <h6 class="collapse-header">Pilihan:</h6>
                 <a class="collapse-item" href="<?= base_url('main/master-data/flowers-type/tipe-tanaman') ?>">Tipe</a>
             </div>
         </div>
