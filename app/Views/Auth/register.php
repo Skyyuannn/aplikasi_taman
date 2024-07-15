@@ -19,9 +19,10 @@
     <link href="<?= base_url() ?>/template/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?= base_url() ?>/template/vendor/sweet-alert2/dist/sweetalert2.min.css" rel="stylesheet">
 
+
 </head>
 
-<body class="bg-gradient-danger" >
+<body class="bg-gradient-danger">
 
     <div class="container">
         <div class="row justify-content-center">
