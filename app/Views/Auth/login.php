@@ -86,7 +86,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small text-white" href="<?= base_url('register') ?>">Create an Account!</a>
+                                <a class="small text-black" href="<?= base_url('register') ?>">Create an Account!</a>
                             </div>
                         </div>
 
