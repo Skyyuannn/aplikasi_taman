@@ -7,11 +7,6 @@
 </div>
 
 <!-- Tombol Panduan -->
-<div class="col-xl-3 col-md-6 mb-4">
-    <a href="<?= base_url('panduan\BUKU_PANDUAN_WEBSITE_TAMAN_ELEKTRONIKA.pdf') ?>" download="BUKU_PANDUAN_WEBSITE_TAMAN_ELEKTRONIKA.pdf" class="btn btn-primary">
-        <i class="fas fa-file-pdf"></i> Panduan
-    </a>
-</div>
 
 
 <!-- Content Row -->
