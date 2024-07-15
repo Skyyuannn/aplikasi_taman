@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,11 +14,16 @@
     <link href="<?= base_url() ?>/template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <!-- Custom styles for this template-->
-
     <link href="<?= base_url() ?>/template/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="<?= base_url() ?>/template/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     <!-- <link href="<?= base_url() ?>template/vendor/datatables/responsive.bootstrap4.min.css" rel="stylesheet"> -->
     <link href="<?= base_url() ?>/template/vendor/sweet-alert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <style>
+        .user-text {
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -36,13 +40,12 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color:tomato;">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -52,7 +55,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= session('name') ?></span>
+                                <span class="mr-2 d-none d-lg-inline user-text"><?= session('name') ?></span>
                                 <img class="img-profile rounded-circle" src="<?= base_url() ?>/template/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -83,6 +86,7 @@
             </div>
             <!-- End of Main Content -->
 
+
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -92,6 +96,7 @@
                 </div>
             </footer>
             <!-- End of Footer -->
+
 
         </div>
         <!-- End of Content Wrapper -->

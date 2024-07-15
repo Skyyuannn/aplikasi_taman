@@ -1,15 +1,15 @@
 <?= $this->extend('layout/admin') ?>
 <?= $this->section('content') ?>
-<!-- Page Heading -->
-<!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Data Tanaman</h1>
-</div> -->
-
 <div class="card shadow">
     <div class="card-header d-flex justify-content-between">
-        <h5 class="m-0 font-weight-bold text-primary">Data Tanaman</h5>
+        <h5 class="m-0 font-weight-bold text-danger">Data Tanaman</h5>
         <div class="section-header-button">
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm" onclick="create()" data-toggle="modal" data-target="#addFLower"><i class="fas fa-plus"></i> Tambah</a>
+            <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="create()" data-toggle="modal" data-target="#addFLower">
+                <i class="fas fa-plus"></i> Tambah
+            </a>
+            <button type="button" class="btn btn-danger btn-sm" title="Filter" onclick="openFilterModal()">
+                <i class="fas fa-filter"></i> Filter
+            </button>
         </div>
     </div>
     <div class="card-body">
@@ -21,15 +21,13 @@
                     <th>Tipe</th>
                     <th>Kuantitas</th>
                     <th>Gambar</th>
-                    <th>Tanggal</th> <!-- Tambahkan kolom tanggal -->
+                    <th>Tanggal</th>
                     <th>Aksi</th>
                 </thead>
                 <tbody>
-
                 </tbody>
             </table>
         </div>
-
     </div>
 </div>
 
@@ -44,7 +42,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= base_url('main/flowers/create') ?>" method="POST" id="add-flower-form">
-                    <input type="hidden" id="id">
+                    <input type="hidden" id="id" name="id">
                     <div class="form-row">
                         <div class="form-group col-md-9">
                             <label>Nama Tanaman :</label>
@@ -81,11 +79,10 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary .btnSubmit">Insert</button>
+                <button type="submit" class="btn btn-primary btnSubmit">Insert</button>
             </div>
             </form>
         </div>
-
     </div>
 </div>
 
@@ -98,20 +95,22 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Tipe Tanaman</label>
-                    <select class="form-control" name="type">
-                        <option value="">Pilih Semua</option>
-                        <?php foreach ($flowerType as $val) { ?>
-                            <option value="<?= $val['id'] ?>"><?= $val['type'] ?></option>
-                        <?php } ?>
-                    </select>
+            <form id="filter-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="category">Tipe Tanaman</label>
+                        <?= selectFlowerType('category') ?>
+                    </div>
+                    <div class="form-group">
+                        <label for="filter_year">Tahun</label>
+                        <input type="number" class="form-control" id="filter_year" name="filter_year" placeholder="Masukkan tahun">
+                    </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-save-modal">Simpan</button>
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary btn-save-modal">Simpan</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -121,8 +120,9 @@
 <?= $this->section('script') ?>
 <script>
     $(document).ready(function() {
-        $('#table-data-tanaman').DataTable({
-            ajax: "<?php echo site_url('main/flowers/fetch-data'); ?>",
+        let dataTanaman = $('#table-data-tanaman').DataTable({
+            info: false,
+            lengthChange: false,
             responsive: true,
             columns: [{
                     data: 'no',
@@ -157,132 +157,139 @@
             columnDefs: [{
                 targets: [0],
                 orderable: false
-            }, {
-                className: "td-text-center editable-cost",
-                targets: 2
-            }, ],
+            }],
             language: {
                 emptyTable: 'Data tidak ditemukan!',
                 searchPlaceholder: "Cari...",
-            }
+            },
+            columns: [{
+                    data: 'id'
+                }, // Kolom 0: ID
+                {
+                    data: 'name'
+                }, // Kolom 1: Nama
+                {
+                    data: 'type'
+                }, // Kolom 2: Tipe
+                {
+                    data: 'qty'
+                }, // Kolom 3: Kuantitas
+                {
+                    data: 'image'
+                }, // Kolom 4: Gambar
+                {
+                    data: 'created_date'
+                }, // Kolom 5: Tanggal
+                {
+                    data: 'action'
+                }, // Kolom 6: Aksi
+            ]
+        });
 
+        $('#filter-form').submit(function(e) {
+            e.preventDefault();
+            dataTanaman.ajax.reload();
+            $('#filterModal').modal('hide');
+        });
 
-        })
         $('#add-flower-form').submit(function(e) {
             e.preventDefault();
-            if (method != 'edit') {
-                submitRequest($('#add-flower-form'), '#table-data-tanaman')
-                clearField()
-                $('#addFLower').modal('hide')
-            } else {
-                let id = $('#id').val()
-                $.ajax({
-                    url: '<?= base_url('main/flowers/update/') ?>' + id,
-                    type: 'post',
-                    data: new FormData($(this)[0]),
-                    dataType: 'json',
-                    processData: false,
-                    contentType: false,
-                    success: function(response) {
-                        $('.btnSubmit').removeAttr('disabled')
-                        if (response.status === 'success') {
-                            successAlert(response.msg)
-                                .then(() => {
-                                    console.log(response);
-                                    $('#table-data-tanaman').DataTable().ajax.reload();
-                                    $('#addFLower').modal('hide')
-                                })
-                        } else {
-                            let errorMessage = response.error
-                            errorAlert(errorMessage, true)
-                        }
-                    },
-                    error: function(err) {
-                        $('.btnSubmit').removeAttr('disabled')
+            $('.btnSubmit').attr('disabled', 'disabled');
+            let formData = new FormData($(this)[0]);
+            let url = $('#id').val() ? '<?= base_url('main/flowers/update/') ?>' + $('#id').val() : '<?= base_url('main/flowers/create') ?>';
+            $.ajax({
+                url: url,
+                type: 'post',
+                data: formData,
+                dataType: 'json',
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    $('.btnSubmit').removeAttr('disabled');
+                    if (response.status === 'success') {
+                        successAlert(response.msg)
+                            .then(() => {
+                                $('#table-data-tanaman').DataTable().ajax.reload();
+                                $('#addFLower').modal('hide');
+                                clearField();
+                            });
+                    } else {
+                        let errorMessage = response.error;
+                        errorAlert(errorMessage, true);
                     }
-                })
-            }
-        })
+                },
+                error: function(err) {
+                    $('.btnSubmit').removeAttr('disabled');
+                    errorAlert('Terjadi kesalahan', true);
+                }
+            });
+        });
 
     });
 
     function create() {
-        method = "create"
-        clearField()
+        clearField();
         $('#addFLowerLabel').html("Insert Tanaman");
         $('#gambar').hide();
-        $('#imageInfo').html('')
+        $('#imageInfo').html('');
+        $('#addFLower').modal('show');
     }
 
     function edit(id) {
-        method = "edit";
         $('#gambar').show();
         $.ajax({
             type: "get",
-            url: "<?php echo site_url('main/flowers/edit/'); ?>" + id,
-            data: {
-                id: id
-            },
-            dataType: 'json',
+            url: "<?= site_url('main/flowers/edit/') ?>" + id,
+            dataType: "json",
             success: function(res) {
-                clearField();
-                method = "edit";
-                $('#id').val(id)
-                $('#addFLowerLabel').html("Edit Tanaman");
-                $('#addFLower').modal('show');
+                $('#addFLowerLabel').html("Update Tanaman");
+                $('#id').val(res.data.id);
                 $('#name').val(res.data.name);
                 $('#qty').val(res.data.qty);
-                $('#type').val(res.data.type);
-                $('#gambar').attr('src', '<?= base_url() ?>/uploads/' + (res.data.image != null ? `${res.data.image}` : 'no-image.jpg'));
-                $('#imageInfo').html('* Kosongkan jika tidak merubah gambar')
+                $('#type').val(res.data.type_id);
+                $('#created_date').val(res.data.created_date);
+                if (res.data.image) {
+                    $('#image').val('');
+                    $('#gambar').attr('src', '<?= base_url() ?>/uploads/flowers/' + res.data.image);
+                    $('#imageInfo').html('');
+                } else {
+                    $('#imageInfo').html('Gambar tidak tersedia');
+                }
+                $('#addFLower').modal('show');
             }
         });
     }
 
-    function deleteData(id) {
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                $.ajax({
-                    url: '<?= base_url('main/flowers/delete/') ?>' + id,
-                    type: 'post',
-                    data: {
-                        id: id
-                    },
-                    dataType: 'json',
-                    processData: false,
-                    contentType: false,
-                    success: function(response) {
-                        $('.deleteButton').removeAttr('disabled')
-                        if (response.status === 'success') {
-                            successAlert(response.msg)
-                                .then(() => {
-                                    $('#table-data-tanaman').DataTable().ajax.reload();
-                                })
-                        } else {
-                            let errorMessage = response.error
-                            errorAlert(errorMessage, true)
-                        }
-                    },
-                    error: function(err) {
-                        $('.deleteButton').removeAttr('disabled')
-                    }
-                })
-            }
-        });
+    function hapus(id) {
+        if (confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+            $.ajax({
+                url: "<?= site_url('main/flowers/delete/') ?>" + id,
+                type: 'POST',
+                data: {
+                    _token: '<?= csrf_token() ?>'
+                },
+                success: function(response) {
+                    successAlert(response.msg)
+                        .then(() => {
+                            $('#table-data-tanaman').DataTable().ajax.reload();
+                        });
+                },
+                error: function(err) {
+                    errorAlert('Terjadi kesalahan', true);
+                }
+            });
+        }
+    }
+
+    function openFilterModal() {
+        $('#filterModal').modal('show');
     }
 
     function clearField() {
-        $('#name').val('')
-        $('#qty').val('')
-        $('#image').val('')
+        $('#addFLower form')[0].reset();
+        $('#id').val('');
+        $('#gambar').hide();
+        $('#imageInfo').html('');
     }
 </script>
 <?= $this->endSection() ?>

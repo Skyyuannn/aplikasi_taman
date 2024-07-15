@@ -2,13 +2,10 @@
 
 <?= $this->section('content') ?>
 <!-- Page Heading -->
-<div class="card mb-3">
-    <h1 class="h3 p-2 mb-0 text-gray-800"><strong>Tipe Tanaman</strong></h1>
-</div>
 
 <div class="card shadow">
     <div class="card-header">
-        <h6 class="m-0 font-weight-bold text-primary">Tambah Tipe Tanaman</h6>
+        <h6 class="m-0 font-weight-bold text-danger">Tipe Tanaman</h6>
     </div>
     <div class="card-body">
         <form action="<?= base_url('main/master-data/flowers-type/create') ?>" method="POST" id="add-flower-type">
@@ -18,7 +15,7 @@
                     <input type="text" class="form-control" id="type" name="type" placeholder="Masukan Jenis Tanaman" required>
                 </div>
                 <div class="form-group col-md-3">
-                    <button type="submit" class="btn btn-primary .btnSubmit">Insert</button>
+                    <button type="submit" class="btn btn-danger .btnSubmit">Insert</button>
                 </div>
             </div>
         </form>
@@ -27,7 +24,7 @@
 
 <div class="card shadow my-3">
     <div class="card-header d-flex justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">Daftar Tipe Tanaman</h6>
+        <h6 class="m-0 font-weight-bold text-danger">Daftar Tipe Tanaman</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
