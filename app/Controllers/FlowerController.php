@@ -134,17 +134,22 @@ class FlowerController extends BaseController
             foreach ($post as $key => $val) {
                 $data[$key] = $val;
             }
+
+                // Memastikan created_date ada dan valid
+            if (isset($data['created_date']) && !empty($data['created_date'])) {
+                $data['created_date'] = date('Y-m-d H:i:s', strtotime($data['created_date']));
+            } else {
+                $data['created_date'] = date('Y-m-d H:i:s');
+            }
+
+
             if ($validateImage) {
                 $image = $this->request->getFile('image');
                 $fileName = $image->getRandomName();
                 $image->move('uploads/', $fileName);
-
                 $data['image'] = $fileName;
-                $data['created_date'] = date('Y-m-d H:i:s');
-
                 $flowers = $this->flowerModel->insert($data);
             } else {
-                $data['created_date'] = date('Y-m-d H:i:s');
                 $flowers = $this->flowerModel->insert($data);
             }
 
