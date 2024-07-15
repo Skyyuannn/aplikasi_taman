@@ -35,7 +35,7 @@
                         <div class="p-5">
                             <div class="text-center">
                             <img src="<?= base_url('Logo_Poltek-transformed.png') ?>" alt="Logo Taman Elektronika" width="80" height="80" style="margin-right: 5px;">
-                                <h1 class="h4 text-gray-900 mb-4"><strong>Sistem Informasi Taman Elektronika</strong></h1>
+                                <h1 class="h4 text-gray-900 mb-4"><strong>TamanKu</strong></h1>
                             </div>
                             <?php if (session()->getFlashdata('error')) : ?>
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
