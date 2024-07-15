@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary" >
 
     <div class="container">
         <div class="row justify-content-center">
