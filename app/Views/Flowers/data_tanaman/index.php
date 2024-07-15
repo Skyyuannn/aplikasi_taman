@@ -1,5 +1,4 @@
 <?= $this->extend('layout/admin') ?>
-
 <?= $this->section('content') ?>
 <!-- Page Heading -->
 <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -77,9 +76,9 @@
                     </div>
             </div>
             <div class="form-group">
-    <label>Tanggal :</label>
-    <input type="date" class="form-control" name="created_date" id="created_date">
-</div>
+                <label>Tanggal :</label>
+                <input type="date" class="form-control" name="created_date" id="created_date">
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary .btnSubmit">Insert</button>
@@ -153,7 +152,7 @@
                     data: 'action',
                     name: 'action'
                 },
-                
+
             ],
             columnDefs: [{
                 targets: [0],

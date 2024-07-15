@@ -44,7 +44,7 @@ class LoginController extends BaseController
                 if ($user['role'] == 1) {
                     return redirect()->to('main/dashboard');
                 } elseif ($user['role'] == 2) {
-                    return redirect()->to('main/dashboarduser');
+                    return redirect()->to('main/dashboard');
                 } else {
                     $this->session->setFlashdata('error', 'Role is not recognized.');
                     return redirect()->to('/login');
