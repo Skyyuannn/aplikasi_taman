@@ -134,13 +134,15 @@ class FlowerController extends BaseController
             foreach ($post as $key => $val) {
                 $data[$key] = $val;
             }
+
+            
             if ($validateImage) {
                 $image = $this->request->getFile('image');
                 $fileName = $image->getRandomName();
                 $image->move('uploads/', $fileName);
 
                 $data['image'] = $fileName;
-                $data['created_date'] = date('Y-m-d H:i:s');
+               
 
                 $flowers = $this->flowerModel->insert($data);
             } else {
