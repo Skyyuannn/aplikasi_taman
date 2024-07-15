@@ -34,7 +34,6 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Komponen:</h6>
                 <a class="collapse-item" href="<?= base_url('main/flowers/data-tanaman') ?>">Data Tanaman</a>
-                <a class="collapse-item" href="<?= base_url('main/flowers/data-tanaman-filter') ?>">Filter Tanaman</a>
             </div>
         </div>
     </li>
