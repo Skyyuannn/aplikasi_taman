@@ -43,7 +43,7 @@ class FetchFlowersAction
                     $query = $query->orLike($column, $data['search']['value']);
                 }
             }
-            $query = $query->groupEnd(); 
+            $query = $query->groupEnd();
         }
 
         return $query;
