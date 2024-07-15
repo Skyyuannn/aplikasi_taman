@@ -3,10 +3,9 @@
 <?= $this->section('content') ?>
 <!-- Page Heading -->
 
-
 <div class="card shadow">
     <div class="card-header">
-        <h6 class="m-0 font-weight-bold text-primary">Tambah Tipe Tanaman</h6>
+        <h6 class="m-0 font-weight-bold text-danger">Tipe Tanaman</h6>
     </div>
     <div class="card-body">
         <form action="<?= base_url('main/master-data/flowers-type/create') ?>" method="POST" id="add-flower-type">
