@@ -24,7 +24,7 @@
 
 <div class="card shadow my-3">
     <div class="card-header d-flex justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">Daftar Tipe Tanaman</h6>
+        <h6 class="m-0 font-weight-bold text-danger">Daftar Tipe Tanaman</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
