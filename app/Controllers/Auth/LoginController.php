@@ -85,6 +85,7 @@ class LoginController extends BaseController
                     }
                     $data['password'] = password_hash((string) $data['password'], PASSWORD_DEFAULT);
                     $data['created_date'] = date('Y-m-d H:i:s');
+                    $data['role'] = 2; // Menambahkan nilai role
 
                     $user = $this->userModel->insert($data);
 

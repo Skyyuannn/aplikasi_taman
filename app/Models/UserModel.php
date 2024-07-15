@@ -10,5 +10,5 @@ class UserModel extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $allowedFields    = ['name', 'username', 'password', 'created_date'];
+    protected $allowedFields    = ['name', 'username', 'password', 'created_date', 'role'];
 }
