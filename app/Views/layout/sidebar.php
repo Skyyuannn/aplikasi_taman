@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-0">
             <img src="<?= base_url('Logo_Poltek-transformed.png') ?>" alt="Logo Taman Elektronika" width="60" height="60" style="margin-right: 5px;">
         </div>
-        <div class="sidebar-brand-text mx-3" style="line-height: 30px;">Taman Elektronika</div>
+        <div class="sidebar-brand-text mx-3" style="line-height: 30px;">TamanKu</div>
     </a>
 
     <hr class="sidebar-divider my-0">
