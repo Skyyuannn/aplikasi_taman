@@ -15,7 +15,6 @@ $routes->group('auth', function ($routes) {
 });
 $routes->group('main', ['filter' => 'authGuard'], function ($routes) {
     $routes->get('dashboard', "DashboardController::index");
-    $routes->get('dashboarduser', "DashboardController::index2");
 
     $routes->group('flowers', function ($routes) {
         $routes->get('data-tanaman', "FlowerController::index");
