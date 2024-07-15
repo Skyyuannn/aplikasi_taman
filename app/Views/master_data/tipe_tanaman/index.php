@@ -2,9 +2,7 @@
 
 <?= $this->section('content') ?>
 <!-- Page Heading -->
-<div class="card mb-3">
-    <h1 class="h3 p-2 mb-0 text-gray-800"><strong>Tipe Tanaman</strong></h1>
-</div>
+
 
 <div class="card shadow">
     <div class="card-header">
