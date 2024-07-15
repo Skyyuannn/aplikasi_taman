@@ -8,7 +8,7 @@
 
 <div class="card shadow">
     <div class="card-header d-flex justify-content-between">
-        <h5 class="m-0 font-weight-bold text-primary">Data Tanaman</h5>
+        <h5 class="m-0 font-weight-bold text-danger">Data Tanaman</h5>
         <div class="section-header-button">
             <a href="javascript:void(0)" class="btn btn-primary btn-sm" onclick="create()" data-toggle="modal" data-target="#addFLower"><i class="fas fa-plus"></i> Tambah</a>
         </div>
@@ -77,9 +77,9 @@
                     </div>
             </div>
             <div class="form-group">
-    <label>Tanggal :</label>
-    <input type="date" class="form-control" name="created_date" id="created_date">
-</div>
+                <label>Tanggal :</label>
+                <input type="date" class="form-control" name="created_date" id="created_date">
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary .btnSubmit">Insert</button>
@@ -153,7 +153,7 @@
                     data: 'action',
                     name: 'action'
                 },
-                
+
             ],
             columnDefs: [{
                 targets: [0],
