@@ -1,5 +1,4 @@
 <?= $this->extend('layout/admin') ?>
-
 <?= $this->section('content') ?>
 <div class="card shadow">
     <div class="card-header d-flex justify-content-between">
@@ -73,10 +72,10 @@
                             <img src="" alt="" id="gambar" class="img-thumbnail" style="width:100px;height: 100px;object-fit: cover;">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>Tanggal :</label>
-                        <input type="date" class="form-control" name="created_date" id="created_date">
-                    </div>
+            </div>
+            <div class="form-group">
+                <label>Tanggal :</label>
+                <input type="date" class="form-control" name="created_date" id="created_date">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -125,22 +124,36 @@
             info: false,
             lengthChange: false,
             responsive: true,
-            processing: true,
-            serverSide: true,
-            ajax: {
-                url: '<?= base_url('main/flowers/load-data') ?>',
-                type: 'POST',
-                data: function(d) {
-                    d._token = '<?= csrf_token() ?>'; // Tambahkan token CSRF
-                    d.category = $('#filterModal #category').val();
-                    d.filter_year = $('#filterModal #filter_year').val();
+            columns: [{
+                    data: 'no',
+                    name: 'no'
                 },
-                dataType: 'json',
-                error: function(xhr, error, thrown) {
-                    console.log('Kesalahan Ajax:', error);
-                    console.log('Kesalahan yang dilempar:', thrown);
-                }
-            },
+                {
+                    data: 'name',
+                    name: 'name'
+                },
+                {
+                    data: 'type',
+                    name: 'type'
+                },
+                {
+                    data: 'qty',
+                    name: 'qty'
+                },
+                {
+                    data: 'image',
+                    name: 'image'
+                },
+                {
+                    data: 'created_date',
+                    name: 'created_date'
+                },
+                {
+                    data: 'action',
+                    name: 'action'
+                },
+
+            ],
             columnDefs: [{
                 targets: [0],
                 orderable: false
