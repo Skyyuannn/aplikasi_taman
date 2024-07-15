@@ -1,4 +1,4 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('main/dashboard') ?>">
@@ -34,7 +34,6 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Komponen:</h6>
                 <a class="collapse-item" href="<?= base_url('main/flowers/data-tanaman') ?>">Data Tanaman</a>
-                <a class="collapse-item" href="<?= base_url('main/flowers/data-tanaman-filter') ?>">Filter Tanaman</a>
             </div>
         </div>
     </li>
