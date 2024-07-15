@@ -118,7 +118,7 @@ foreach ($flowersByYear as $year => $flowers) {
             datasets: [{
                 label: 'Jumlah Tanaman',
                 data: <?= json_encode(array_reverse($quantities)) ?>, // Mengubah urutan data jumlah tanaman sesuai dengan urutan tahun yang baru
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                backgroundColor: 'rgba(54, 162, 235, 0.8)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 borderWidth: 1
             }]
