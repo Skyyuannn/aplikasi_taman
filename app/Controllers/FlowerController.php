@@ -31,7 +31,7 @@ class FlowerController extends BaseController
     public function loadData()
     {
         $postData = $this->request->getPost();
-        $postData['filter_year'] = $this->request->getPost('filter_year');
+        $postData['filter_year'] = $this->request->getPost('filter_year'); 
         $postData['category'] = $this->request->getPost('category'); // Tambahkan baris ini
 
         return (new FetchIndexDataAction())->execute($postData);
@@ -135,7 +135,7 @@ class FlowerController extends BaseController
                 $data[$key] = $val;
             }
 
-            // Memastikan created_date ada dan valid
+                // Memastikan created_date ada dan valid
             if (isset($data['created_date']) && !empty($data['created_date'])) {
                 $data['created_date'] = date('Y-m-d H:i:s', strtotime($data['created_date']));
             } else {

@@ -22,6 +22,7 @@ class FetchIndexDataAction
             $row['qty'] = $val->qty;
             $row['image'] = '<img src="' . base_url() . '/uploads\/' . ($val->image != '' ? $val->image : 'no-image.jpg') . '" alt="..." class="img-thumbnail" style="width: 80px;height: 80px;object-fit: cover;">';
             $row['created_date'] = $val->created_date;
+          
             $data[] = $row;
         }
 
