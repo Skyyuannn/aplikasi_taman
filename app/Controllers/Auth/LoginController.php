@@ -39,7 +39,16 @@ class LoginController extends BaseController
             $passwordVerify = password_verify($password, $userPassword);
             if ($passwordVerify) {
                 $userSession = $this->setUserSession($user);
-                return redirect()->to('main/dashboard');
+
+                // Cek role dan lakukan redirect sesuai dengan role
+                if ($user['role'] == 1) {
+                    return redirect()->to('main/dashboard');
+                } elseif ($user['role'] == 2) {
+                    return redirect()->to('main/dashboarduser');
+                } else {
+                    $this->session->setFlashdata('error', 'Role is not recognized.');
+                    return redirect()->to('/login');
+                }
             } else {
                 $this->session->setFlashdata('error', 'Password is incorrect.');
                 return redirect()->to('/login');
