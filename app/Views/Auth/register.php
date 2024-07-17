@@ -56,7 +56,7 @@
                                         <label class="form-check-label" for="showPassword">Show Password</label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block doRegister">
+                                <button type="submit" class="btn btn-danger btn-user btn-block doRegister">
                                     Register Account
                                 </button>
                             </form>
