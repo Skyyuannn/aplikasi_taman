@@ -5,7 +5,7 @@
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Feedback Form</div>
+                <div class="card-header">Formulir Umpan Balik</div>
 
                 <div class="card-body">
                     <form id="feedbackForm">
@@ -44,7 +44,7 @@
                 dataType: 'json',
                 success: function(response) {
                     if (response.status === 'success') {
-                        alert('Feedback berhasil dikirim. Terima kasih atas partisipasinya!');
+                        alert('Feedback berhasil dikirim. Terima kasih atas partisipasinya! -TE37');
                         $('#feedbackForm')[0].reset(); // Reset form setelah pengiriman berhasil
                     } else {
                         alert('Gagal mengirim feedback. Silakan coba lagi.');
