@@ -51,6 +51,15 @@
     </li>
 
     <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('main/feedback') ?>">
+            <i class="fas fa-fw fa-file-alt"></i>
+            <span>Feedback</span>
+        </a>
+    </li>
+
+
+
+    <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
             <i class="fas fa-fw fas fa-sign-out-alt"></i>
             <span>Logout</span></a>
