@@ -18,6 +18,7 @@ class FeedbackController extends Controller
         $name = $this->request->getPost('name');
         $email = $this->request->getPost('email');
         $message = $this->request->getPost('message');
+        $phone = $this->request->getPost('phone');
 
         // Simpan atau lakukan sesuai kebutuhan Anda, contoh sederhana bisa menyimpan ke database atau mengirim email admin
         // Misalnya, menyimpan ke database
