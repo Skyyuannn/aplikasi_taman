@@ -49,6 +49,15 @@
             </div>
         </div>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?= base_url('main/feedback') ?>">
+            <i class="fas fa-fw fa-comment"></i>
+            <span>Umpan Balik</span>
+        </a>
+    </li>
+
+
+
 
     <li class="nav-item">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
