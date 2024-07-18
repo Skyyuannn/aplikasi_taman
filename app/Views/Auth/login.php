@@ -21,10 +21,9 @@
     <link href="<?= base_url() ?>/template/css/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        body {
-
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            color: #ffffff;
+         body {
+            background: url('<?= base_url('tamanku.jpg') ?>') no-repeat center center fixed;
+            background-size: cover;
         }
 
         .card {
@@ -43,7 +42,7 @@
     </style>
 </head>
 
-<body class="bg-gradient-danger">
+<body class="">
 
 
     <div class="container">
