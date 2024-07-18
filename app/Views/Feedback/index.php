@@ -8,7 +8,7 @@
                 <div class="card-header">Formulir Umpan Balik</div>
 
                 <div class="card-body">
-                    <form id="feedbackForm">
+                    <form id="feedbackForm" method="post" name="submit-to-google-sheet">
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" class="form-control" id="name" name="name" required>
@@ -56,5 +56,18 @@
             });
         });
     });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwE_TzyQdjFFUz84aBd91eRzv3fWdWhm_ygkMQBX8uxsbPJyIW2Oof_7ty2_QmKd0V9mw/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    })
 </script>
 <?= $this->endSection() ?>
