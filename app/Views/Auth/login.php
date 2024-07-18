@@ -18,9 +18,16 @@
     <!-- Custom styles for this template-->
     <link href="<?= base_url() ?>/template/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+        body {
+            background: url('<?= base_url('background/tamanku.jpg') ?>') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+
 </head>
 
-<body class="bg-gradient-danger" >
+<body>
 
     <div class="container">
 
@@ -34,7 +41,7 @@
                         <!-- Nested Row within Card Body -->
                         <div class="p-5">
                             <div class="text-center">
-                            <img src="<?= base_url('Logo_Poltek-transformed.png') ?>" alt="Logo Taman Elektronika" width="80" height="80" style="margin-right: 5px;">
+                                <img src="<?= base_url('Logo_Poltek-transformed.png') ?>" alt="Logo Taman Elektronika" width="80" height="80" style="margin-right: 5px;">
                                 <h1 class="h4 text-gray-900 mb-4"><strong>TamanKu</strong></h1>
                                 <p style="margin-top: -20px; margin-bottom:50px;">Aplikasi taman Elektronika karya anak bangsa.</p>
                             </div>
