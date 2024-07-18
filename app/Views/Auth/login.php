@@ -20,7 +20,7 @@
 
     <style>
         body {
-            background: url('<?= base_url('background/tamanku.jpg') ?>') no-repeat center center fixed;
+            background: url('<?= base_url('tamanku.jpg') ?>') no-repeat center center fixed;
             background-size: cover;
         }
     </style>
@@ -67,7 +67,7 @@
                                     <input type="checkbox" class="form-check-input" value="1" id="showPassword">
                                     <label class="form-check-label" for="showPassword">Show Password</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-danger btn-user btn-block">
                                     Login
                                 </button>
                             </form>
