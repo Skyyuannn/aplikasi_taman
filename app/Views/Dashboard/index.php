@@ -35,60 +35,13 @@ $quantities = [];
 
 foreach ($flowersByYear as $year => $flowers) {
     $years[] = $year;
-    $quantities[] = array_reduce($flowers, function($carry, $flower) {
+    $quantities[] = array_reduce($flowers, function ($carry, $flower) {
         return $carry + $flower['qty'];
     }, 0);
 }
 
 ?>
 
-
-<!-- Content Row -->
-<div class="row">
-    <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-12 col-md-12 mb-4">
-        <a href="flowers\data-tanaman-filter" style="text-decoration: none; color: inherit;">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Total Tanaman</div>
-                              
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalFlowers['qty'] ?></div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fas fa-leaf fa-2x text-primary"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="row">
-    <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-12 col-md-12 mb-4">
-        <a href="master-data/flowers-type/tipe-tanaman" style="text-decoration: none; color: inherit;">
-            <div class="card border-left-danger shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                Total Jenis Tanaman</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($flowersType) ?></div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="fab fa-envira fa-2x text-danger"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-
-</div>
 <!-- Grafik Tanaman Berdasarkan Tahun -->
 <div class="row">
     <div class="col-xl-12 col-md-12 mb-4">
@@ -137,9 +90,57 @@ foreach ($flowersByYear as $year => $flowers) {
     });
 </script>
 
+<!-- Content Row -->
+<div class="row">
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-12 col-md-12 mb-4">
+        <a href="flowers\data-tanaman-filter" style="text-decoration: none; color: inherit;">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total Tanaman</div>
+
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $totalFlowers['qty'] ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-leaf fa-2x text-primary"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Earnings (Monthly) Card Example -->
+    <div class="col-xl-12 col-md-12 mb-4">
+        <a href="master-data/flowers-type/tipe-tanaman" style="text-decoration: none; color: inherit;">
+            <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                Total Jenis Tanaman</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($flowersType) ?></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fab fa-envira fa-2x text-danger"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+
+
 <!-- Flowers By Year -->
 <div class="row">
-    <?php foreach ($flowersByYear as $year => $flowers): ?>
+    <?php foreach ($flowersByYear as $year => $flowers) : ?>
         <div class="col-xl-12 col-md-12 mb-4">
             <div class="card shadow h-100 py-2">
                 <div class="card-body">
@@ -149,7 +150,7 @@ foreach ($flowersByYear as $year => $flowers) {
                                 Tanaman Tahun <?= $year ?></div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($flowers) ?> Tanaman</div>
                             <ul>
-                                <?php foreach ($flowers as $flower): ?>
+                                <?php foreach ($flowers as $flower) : ?>
                                     <li><?= $flower['name'] ?> (<?= $flower['qty'] ?>)</li>
                                 <?php endforeach; ?>
                             </ul>
