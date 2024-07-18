@@ -15,6 +15,8 @@ $routes->group('auth', function ($routes) {
 });
 $routes->group('main', ['filter' => 'authGuard'], function ($routes) {
     $routes->get('dashboard', "DashboardController::index");
+    $routes->get('feedback', 'FeedbackController::index'); // Menampilkan halaman feedback
+    $routes->post('feedback/submit', 'FeedbackController::submit'); // Mengirimkan data feedback
 
     $routes->group('flowers', function ($routes) {
         $routes->get('data-tanaman', "FlowerController::index");
@@ -38,9 +40,9 @@ $routes->group('main', ['filter' => 'authGuard'], function ($routes) {
         });
     });
 
-    $routes->group('profile', function ($routes) {
-        $routes->get('setting', 'ProfileController::index');
-        $routes->post('update/(:segment)', 'ProfileController::update/$1');
+    $routes->group('main', function ($routes) {
+        $routes->get('feedback', 'Feedback::index'); // Menampilkan halaman feedback
+        $routes->post('feedback/submit', 'Feedback::submit'); // Mengirimkan data feedback
     });
 
     $routes->get('logout', 'Auth\LoginController::logout');
