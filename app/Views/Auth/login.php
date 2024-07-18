@@ -22,6 +22,7 @@
 
     <style>
         body {
+
             background: linear-gradient(to right, #ff416c, #ff4b2b);
             color: #ffffff;
         }
@@ -44,6 +45,7 @@
 
 <body class="bg-gradient-danger">
 
+
     <div class="container">
 
         <!-- Outer Row -->
@@ -56,9 +58,11 @@
                         <!-- Nested Row within Card Body -->
                         <div class="p-5">
                             <div class="text-center">
+
                                 <img src="<?= base_url('Logo_Poltek-transformed.png') ?>" alt="Logo Taman Elektronika" width="80" height="80" class="mb-4">
                                 <h1 class="h4 text-gray-900 mb-4"><strong>Website TamanKu</strong></h1>
                                 <p class="mb-4">Aplikasi Taman Elektronika karya anak bangsa.</p>
+
                             </div>
                             <?php if (session()->getFlashdata('error')) : ?>
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -80,7 +84,7 @@
                                     <input type="checkbox" class="form-check-input" value="1" id="showPassword">
                                     <label class="form-check-label" for="showPassword">Show Password</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-danger btn-user btn-block">
                                     Login
                                 </button>
                             </form>
