@@ -88,7 +88,7 @@ foreach ($flowersByYear as $year => $flowers) {
 <div class="row">
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-12 col-md-12 mb-4">
-        <a href="flowers\data-tanaman-filter" style="text-decoration: none; color: inherit;">
+        
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -104,14 +104,14 @@ foreach ($flowersByYear as $year => $flowers) {
                     </div>
                 </div>
             </div>
-        </a>
+       
     </div>
 </div>
 
 <div class="row">
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-12 col-md-12 mb-4">
-        <a href="master-data/flowers-type/tipe-tanaman" style="text-decoration: none; color: inherit;">
+       
             <div class="card border-left-danger shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -126,7 +126,7 @@ foreach ($flowersByYear as $year => $flowers) {
                     </div>
                 </div>
             </div>
-        </a>
+      
     </div>
 
 </div>
