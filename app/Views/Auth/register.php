@@ -20,9 +20,16 @@
     <link href="<?= base_url() ?>/template/vendor/sweet-alert2/dist/sweetalert2.min.css" rel="stylesheet">
 
 
+    
 </head>
+<style>
+    body {
+            background: url('<?= base_url('tamanku.jpg') ?>') no-repeat center center fixed;
+            background-size: cover;
+        }
+</style>
 
-<body class="bg-gradient-danger">
+<body class="">
 
     <div class="container">
         <div class="row justify-content-center">

@@ -45,5 +45,10 @@ $routes->group('main', ['filter' => 'authGuard'], function ($routes) {
         $routes->post('feedback/submit', 'Feedback::submit'); // Mengirimkan data feedback
     });
 
+    $routes->group('profile', function ($routes) {
+        $routes->get('setting', 'ProfileController::index');
+        $routes->post('update/(:segment)', 'ProfileController::update/$1');
+    });
+
     $routes->get('logout', 'Auth\LoginController::logout');
 });
